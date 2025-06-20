@@ -11,7 +11,7 @@ MINUTE(TO_TIMESTAMP(STARTED_AT)) AS MINUTE_STARTED_AT,
 
 
 from
-{{ source('demo', 'bike') }}
+{{ ref('stg_bike') }}
 
 )
 select *  from CTE
